@@ -1,0 +1,102 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+.bg{
+
+	background-image: url(../img/bg.png);
+	background-size: cover;
+	animation-name: slide;
+	animation-duration: 4s ease-in-out;
+}
+@keyframes slide{
+	0% {
+		left: 0px;
+		top: 100px;
+	}
+	25%{
+		left: 100px;
+		top: 100px;
+	}
+}
+a:link{
+	color: #ffffff;
+}
+a:visited{
+	color: #ffffff;
+}
+a:hover{
+	color: #ffae1a !important;
+}
+a:active{
+	color: #ffa500;
+}
+
+.jumbotron{
+	background-image: url(../img/jumbo.png);
+	border-radius: 0px !important;
+	margin-bottom: 0px !important;
+}
+.text h1{
+	text-align: center;
+	font-family: Times new roman;
+	font-variant: small-caps;
+	color: #ffffff;
+	font-size: 60px;
+}
+.breadcrumb{
+	border-radius: 0px !important;
+	background-color: #031b31 !important;
+}
+.breadcrumb-item{
+	padding-left: 40px;
+}
+.active{
+	color: #ffa500 !important;
+}
+.row{
+	width: 100%;
+	display: inline-block;
+	margin: 0px 0px 0px 10px;
+}
+.column{
+	width: 50%;
+	display: inline-block;
+	padding: 40px;
+	text-align: center;
+}
+.line{
+	padding: 20px;
+	margin: 0px 30px;
+	font-family: didact gothic;
+	color: #555555;
+	text-align: center;
+}
+.column img{
+	width: 80%;
+	height: 80%;
+	padding: 0px 0px 0px 10px;
+	border-radius: 10px;
+}
+.column h1{
+	color: #ffa500;
+	font-family: times new roman;
+}
+.column h3{
+	color: #444444;
+	font-family: didact gothic;
+}
+.column p{
+	font-family: didact gothic;
+	padding: 20px 0px 0px 20px;
+	text-align: justify;
+}
+u{
+	color: #00bf8f;
+}
+@media (max-width:768px){
+	.column{
+		margin: 10px;
+		width: 100%;
+	}
+}

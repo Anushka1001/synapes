@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Synapes Life Science</title>
+	<link rel="icon" href="img/logo.png">
+  <meta charset="utf-8">
+  <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/about.css">
+  <!-- bootstrap for carousal -->
+  <!-- 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script><!-- 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
+
+  <!-- bootstrap end -->
+</head>
+<body>
+<div class="timeline-container" id="timeline-1">
+  <div class="timeline-header">
+    <h2 class="timeline-header__title">About Us</h2>
+    <h3 class="timeline-header__subtitle">Synapes Life Science</h3>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item" data-text="Synapes Life Science">
+      <div class="timeline__content"><img class="timeline__img" src="img/values.jpg"/>
+        <h2 class="timeline__content-title">Our Values</h2>
+        <p class="timeline__content-desc">Our core values are driven by a desire to improve life, achieve scientific excellence, operate with the highest standards of integrity, expand access to our products and employ a diverse workforce that values collaboration.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="Synapes Life Science">
+      <div class="timeline__content"><img class="timeline__img" src="img/mission.jpg"/>
+        <h2 class="timeline__content-title">Our Mission</h2>
+        <p class="timeline__content-desc">Our mission is to discover new ways to improve and extend people’s lives. Our vision is to be a trusted leader in changing the practice of medicine.We use science-based innovation to address some of society's most challenging healthcare issues.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="Synapes Life Science">
+      <div class="timeline__content"><img class="timeline__img" src="img/inno.jpg"/>
+        <h2 class="timeline__content-title">Our Strategy</h2>
+        <p class="timeline__content-desc">Our strategy is to use science-based innovation to deliver better patient outcomes. We aim to lead in growing areas of healthcare. We are well prepared for a world with a growing, aging population and continuously evolving healthcare needs.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="Synapes Life Science">
+      <div class="timeline__content"><img class="timeline__img" src="img/life.jpg"/>
+        <h2 class="timeline__content-title">Improving Life</h2>
+        <p class="timeline__content-desc">We embrace our quest to tackle health challenges because we are inspired by the differences we can make in the lives of people around the world.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="Synapes Life Science">
+      <div class="timeline__content"><img class="timeline__img" src="img/ethics.jpg"/>
+        <h2 class="timeline__content-title">Ethics & Integrity</h2>
+        <p class="timeline__content-desc">We are committed to the highest standards of ethics and integrity. We are responsible to our customers, to Synapes Life Sciences Pvt. Ltd. employees, to the environments we inhabit, and to the societies we serve worldwide.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="Synapes Life Science">
+      <div class="timeline__content"><img class="timeline__img" src="img/health.jpg"/>
+        <h2 class="timeline__content-title">Access to Health</h2>
+        <p class="timeline__content-desc">We aspire to improve the health and wellness of people around the world by expanding access to our medicines and vaccines.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="Synapes Life Science">
+      <div class="timeline__content"><img class="timeline__img" src="img/team.png"/>
+        <h2 class="timeline__content-title">Diversity & Teamwork</h2>
+        <p class="timeline__content-desc">Our ability to excel depends on the integrity, knowledge, imagination, skill, diversity and teamwork of our employees. In the context of an increasingly challenging healthcare environment, we are reinforcing our culture, boosting our skills and building a diverse workforce with talented leaders to produce better results for patients.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="end">
+	<h1>Synapes Life Sciences Pvt. Ltd. is the right solution for you and your business</h1>
+	<a href="contact.html"><button>Contact</button></a>
+</div>
+
+<script>
+  (function($) {
+  $.fn.timeline = function() {
+    var selectors = {
+      id: $(this),
+      item: $(this).find(".timeline-item"),
+      activeClass: "timeline-item--active",
+      img: ".timeline__img"
+    };
+    selectors.item.eq(0).addClass(selectors.activeClass);
+    selectors.id.css(
+      "background-image",
+      "url(" +
+        selectors.item
+          .first()
+          .find(selectors.img)
+          .attr("src") +
+        ")"
+    );
+    var itemLength = selectors.item.length;
+    $(window).scroll(function() {
+      var max, min;
+      var pos = $(this).scrollTop();
+      selectors.item.each(function(i) {
+        min = $(this).offset().top;
+        max = $(this).height() + $(this).offset().top;
+        var that = $(this);
+        if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+          selectors.item.removeClass(selectors.activeClass);
+          selectors.id.css(
+            "background-image",
+            "url(" +
+              selectors.item
+                .last()
+                .find(selectors.img)
+                .attr("src") +
+              ")"
+          );
+          selectors.item.last().addClass(selectors.activeClass);
+        } else if (pos <= max - 40 && pos >= min) {
+          selectors.id.css(
+            "background-image",
+            "url(" +
+              $(this)
+                .find(selectors.img)
+                .attr("src") +
+              ")"
+          );
+          selectors.item.removeClass(selectors.activeClass);
+          $(this).addClass(selectors.activeClass);
+        }
+      });
+    });
+  };
+})(jQuery);
+
+$("#timeline-1").timeline();
+
+</script>

@@ -1,0 +1,85 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+a:link{
+	color: #ffffff;
+}
+a:visited{
+	color: #ffffff;
+}
+a:hover{
+	color: #ffae1a !important;
+}
+a:active{
+	color: #ffa500;
+}
+
+.jumbotron{
+	background-image: url(../img/jumbo.png);
+	border-radius: 0px !important;
+	margin-bottom: 0px !important;
+}
+.text h1{
+	text-align: center;
+	font-family: Times new roman;
+	font-variant: small-caps;
+	color: #ffffff;
+	font-size: 60px;
+}
+.breadcrumb{
+	border-radius: 0px !important;
+	background-color: #031b31 !important;
+}
+.breadcrumb-item{
+	padding-left: 40px;
+}
+.active{
+	color: #ffa500 !important;
+}
+.row{
+	width: 50%;
+	display: inline-block;
+}
+.column{
+	width: 50%;
+	display: inline-block;
+	padding:5px;
+}
+.row2{
+	display: inline;
+	width: 50%;
+}
+.mssg{
+	width: 100%;
+}
+.form-control{
+  border-radius: 1rem;
+  padding-left: 25px;
+  border: none !important;
+  width: 100%;
+  box-shadow: none !important;
+}
+.form-group{
+  border: none;
+  border-bottom: 1px solid #031b31;
+}
+.button{
+	background-color: #031b31;
+	color: #ffffff;
+	border:none;
+	border-radius: 5px;
+	padding: 2px 10px;
+	font-size: 18px;
+}
+.button:hover{
+	transform: scale(1.1);
+	cursor: pointer;
+	background-color: #ffa500;
+	color: #ffffff;
+}
+.map{
+	width: 100%;
+	margin: 20px 0px 0px 0px;
+	padding: 0px 20px;
+}

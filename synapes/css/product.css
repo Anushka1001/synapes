@@ -1,0 +1,170 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-image: url(../img/bg2.jpg);
+	background-size: cover;
+}
+a:link{
+	color: #ffffff;
+}
+a:visited{
+	color: #ffffff;
+}
+a:hover{
+	color: #ffae1a !important;
+}
+a:active{
+	color: #ffa500;
+}
+
+.jumbotron{
+	background-image: url(../img/jumbo.png);
+	border-radius: 0px !important;
+	margin-bottom: 0px !important;
+}
+.text h1{
+	text-align: center;
+	font-family: Times new roman;
+	font-variant: small-caps;
+	color: #ffffff;
+	font-size: 60px;
+}
+.breadcrumb{
+	border-radius: 0px !important;
+	background-color: #031b31 !important;
+}
+.breadcrumb-item{
+	padding-left: 40px;
+}
+.active{
+	color: #ffa500 !important;
+}
+.row{
+	width: 100%;
+	margin: 50px;
+	justify-content: center;
+	display: inline-block;
+}
+.column{
+	width: 50%;
+	padding: 10px;
+	align-content: center;
+	display: inline-block;
+}
+
+
+/*css card*/
+.collection-card {
+    position: relative;
+    width: 40vw;
+    height: auto;
+    max-height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #031b31;
+    font-family: 'didact gothic', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #ffffff;
+    box-shadow: 0 40px 40px -20px #555555;
+}
+
+.collection-card .card-img {
+    position: relative;
+    width: 100%;
+    height: 240px;
+}
+
+.collection-card .card-img a {
+    font-size: 0;
+}
+
+.collection-card .photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 300ms;
+}
+
+.collection-card .avator {
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    transform: translateY(50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    transition: 300ms;
+}
+
+
+.collection-card .card-text {
+    width: 100%;
+    height: auto;
+    padding: 50px 40px 20px;
+    text-align: center;
+}
+
+.collection-card .title {
+    font-weight: 400;
+}
+
+.collection-card .author {
+    font-size: .875em;
+    color: #ffa500;
+}
+
+h5 {
+    font-size: 1.25em;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+
+.collection-card .photo:hover {
+    filter: grayscale(100%);
+}
+
+.collection-card .avator:hover {
+    box-shadow: 0 0 0 4px #ffffff;
+}
+
+
+/* Display this style when screen-width is lower than 425px */
+@media only screen and (max-width: 425px) {
+    .collection-card {
+        width: 100%;
+        height: auto;
+        min-height: 370px;
+        margin: 20px;
+    }
+
+}
+
+.designer {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    font-weight: 400;
+    color: #46a2b9;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 300ms;
+}
+
+.designer a {
+    text-decoration: none;
+    color: #23515d;
+}
+
+body:hover .designer {
+    opacity: 1;
+}
